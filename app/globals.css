@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.container {
+  width: 100%;
+  padding-right: 2rem/* 32px */;
+  padding-left: 2rem/* 32px */;
+}
