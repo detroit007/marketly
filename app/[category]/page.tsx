@@ -30,7 +30,7 @@ export default async function Category( { params: { category } } :  Props) {
                     //         <p className="Allproduct-price">${product?.price}</p>
                     //     </div>
                     // </Link>
-                    <div className="m-2">
+                    <div className="m-2" key={product._id}>
                     <ProductCard
                         key={product._id}
                         tittle={product.name}
