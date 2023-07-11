@@ -9,7 +9,7 @@ export type product = {
     price: "number",
     quantity: "number",
     slug: "string",
-    size: "string",
+    size: string[],
     images: string[],
     detail: "string",
     url: "string",

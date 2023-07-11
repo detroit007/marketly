@@ -1,22 +1,20 @@
-import { getProducts } from "@/sanity/sanity-utils"
+import Hero from "@/components/Hero";
+import Jewellery from "@/components/Jewellery";
+import Newslatter from "@/components/NewsLatter";
+import ProductList from "@/components/ProductList";
+import Promotion from "@/components/Promotion";
 
-export default async function Home() {
-  const products = await getProducts();
-  console.log(products, "PRODUCT SS ASANITY");
+export default async function Home(){
   
   return (
+    <>
     <div className="container mx-auto">
-    <div>This is my project page</div>
-        {
-            products?.map(
-                product=><div>
-                    <p>{product.name}</p>
-                    {product?.images?.map((image)=>
-                        <img alt="" src={image} />
-                    )}
-                    </div>
-            )
-        }
-    </div>
+      <Hero />
+      <Promotion/>
+      <ProductList />
+      <Jewellery />
+      <Newslatter />
+  </div>
+    </>
   )
 }
